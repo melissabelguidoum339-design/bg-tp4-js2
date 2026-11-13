@@ -1,0 +1,54 @@
+/* ==========================================================
+   TP4 - Etape 1 : mise en forme du tableau
+   ========================================================== */
+
+/* Conteneur du tableau (div id="table_container") :
+   - centre le tableau au milieu de la page
+   - police globale Calibri en premiere police */
+#table_container {
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    width: 80%;
+    margin: 40px auto;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* En-tete du tableau */
+th {
+    background-color: #007bb8;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 6px;
+}
+
+/* Cellules */
+td {
+    font-size: 11px;
+    color: #333333;
+    padding: 8px 6px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+/* Classes des colonnes */
+.col_number {
+    width: 8%;
+    text-align: center;
+}
+
+.col_text {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.col_chkbox {
+    width: 8%;
+    text-align: center;
+}

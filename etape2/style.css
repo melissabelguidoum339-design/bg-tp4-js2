@@ -1,0 +1,42 @@
+/* ===== Étape 1 : mise en forme du tableau ===== */
+
+/* Police globale : Calibri en première police */
+body {
+    font-family: Calibri, Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Conteneur : centre le tableau au milieu */
+#table_container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px;
+    background: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+/* En-tête bleu */
+th {
+    background: #0a7ab8;
+    color: #ffffff;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #dddddd;
+    color: #444444;
+}
+
+/* Classes des colonnes */
+.col_number  { width: 60px;  text-align: center; }
+.col_text    { text-align: left; }
+.col_chkbox  { width: 80px;  text-align: center; }
+
+/* Boutons par défaut : petits, comme sur les captures du TP */
+button { font-size: 12px; padding: 3px 8px; }

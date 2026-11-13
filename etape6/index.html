@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD-Persons - Étape 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="table_container">
+        <!-- Formulaire de saisie, juste au-dessus du tableau -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_prenom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <!-- Le clic appelle doNewData() -->
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Points</th>
+                <th>Select</th>
+            </tr>
+            <!-- Lignes d'aperçu : visibles même sans JavaScript. init() dans script.js les remplace
+                 par les lignes générées depuis le tableau "persons" (cours slides 39-40, 44, 104) -->
+            <tr class="row static">
+                <td class="col_number">1</td>
+                <td class="col_text">nom-1</td>
+                <td class="col_text">prenom-1</td>
+                <td class="col_number">5</td>
+                <td class="col_chkbox"><input type="checkbox" /></td>
+            </tr>
+            <tr class="row static">
+                <td class="col_number">2</td>
+                <td class="col_text">nom-2</td>
+                <td class="col_text">prenom-2</td>
+                <td class="col_number">10</td>
+                <td class="col_chkbox"><input type="checkbox" /></td>
+            </tr>
+            <tr class="row static">
+                <td class="col_number">3</td>
+                <td class="col_text">nom-3</td>
+                <td class="col_text">prenom-3</td>
+                <td class="col_number">15</td>
+                <td class="col_chkbox"><input type="checkbox" /></td>
+            </tr>
+        </table>
+
+        <!-- Espace "Résumé" juste au-dessous du tableau. Texte de départ : 3 lignes, total 30.
+             update_summary() le met à jour avec getElementById + innerText (cours slides 62-64 et 90-91) -->
+        <div id="container_summary">
+            <p id="p1">3 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Total point(s)= 30</p>
+        </div>
+
+        <!-- Div qui regroupe Console Tableau + Supprimer -->
+        <div id="container_btn">
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+            <!-- Nouveau bouton : supprime les lignes cochées -->
+            <button class="btn-del" onclick="deleteRow()">Supprimer</button>
+        </div>
+    </div>
+
+    <!-- Script externe placé à la FIN du body : le DOM est déjà chargé quand il s'exécute
+         (cours slides 24, 26, 27) -->
+    <script src="script.js"></script>
+</body>
+</html>
